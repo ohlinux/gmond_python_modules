@@ -1,0 +1,29 @@
+modules {
+  module {
+    name = 'aniwar'
+    language = 'python'
+
+    param status_url {
+      value = 'http://localhost:9773/aniwar/stats'
+    }
+  }
+}
+
+collection_group {
+  collect_every = 60
+  time_threshold = 60
+
+  metric {
+    name = 'aniwar_total_sessions'
+  }
+
+  metric {
+    name = 'aniwar_idle_sessions'
+  }
+  metric {
+    name = 'aniwar_playback_sessions'
+  }
+  metric {
+    name = 'aniwar_arena_sessions'
+  }
+}
